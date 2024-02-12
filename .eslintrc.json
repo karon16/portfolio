@@ -1,8 +1,7 @@
 {
-  "extends": ["next", "prettier"],
-  "rules" :{
-    "no-console": "error",
-    "strict" : ["error", "never"]
-    
-  }
+	"extends": ["next", "prettier"],
+	"rules": {
+		"no-console": "error",
+		"strict": ["error", "never"]
+	}
 }
