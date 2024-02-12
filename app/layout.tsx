@@ -6,7 +6,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Christopher Buhendwa portfolio',
-	description: 'Welcome to my portfolio, I am a frontend developer and AI student currently studying in South Korea.',
+	description:
+		'Welcome to my portfolio, I am a frontend developer and AI student currently studying in South Korea.',
+	icons: {
+		icon: '/icon.ico',
+
+		}
 };
 
 export default function RootLayout({
