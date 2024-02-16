@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Anek_Kannada } from 'next/font/google';
 import './globals.css';
 import Header from './ui/header';
+import StoreProvider from './storeProvider';
 
 const anek = Anek_Kannada({ subsets: ['latin'] });
 
@@ -20,16 +21,18 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body
-				className={`px-28 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
-			>
-				<header>
-					<Header />
-				</header>
-				{children}
-				<footer>Footer</footer>
-			</body>
-		</html>
+		<StoreProvider>
+			<html lang='en'>
+				<body
+					className={`px-28 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
+				>
+					<header>
+						<Header />
+					</header>
+					{children}
+					<footer>Footer</footer>
+				</body>
+			</html>
+		</StoreProvider>
 	);
 }

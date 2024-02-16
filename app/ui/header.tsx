@@ -1,28 +1,33 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import Link from 'next/link';
+import { useAppDispatch, useAppSelector } from '../lib/redux/hooks';
+import { toggleTheme } from '../lib/redux/features/theme/themeSlice';
 
 function Header() {
-	const [theme, setTheme] = useState(
-		typeof window !== 'undefined' ? localStorage.theme : 'dark'
-	);
+	const currentTheme = useAppSelector((state) => state.theme.currentTheme);
+	const dispatch = useAppDispatch();
 
-	const colorTheme = theme === 'dark' ? 'light' : 'dark';
+	// const [theme, setTheme] = useState(
+	// 	typeof window !== 'undefined' ? localStorage.theme : 'dark'
+	// );
 
-	useEffect(() => {
-		const root = window.document.documentElement;
+	// const colorTheme = theme === 'dark' ? 'light' : 'dark';
 
-		root.classList.remove(colorTheme);
-		root.classList.add(theme);
+	// useEffect(() => {
+	// 	const root = window.document.documentElement;
 
-		if (typeof window !== 'undefined') {
-			localStorage.setItem('theme', theme);
-		}
-	}, [colorTheme, theme]);
+	// 	root.classList.remove(colorTheme);
+	// 	root.classList.add(theme);
+
+	// 	if (typeof window !== 'undefined') {
+	// 		localStorage.setItem('theme', theme);
+	// 	}
+	// }, [colorTheme, theme]);
 
 	return (
 		<div className='flex  items-center content-center space-x-3 '>
@@ -31,7 +36,7 @@ function Header() {
 					<Image
 						height={80}
 						width={80}
-						src={`${theme === 'dark' ? '/chris.svg' : '/chris_light.svg'}`}
+						src={`${currentTheme === 'dark' ? '/chris.svg' : '/chris_light.svg'}`}
 						alt='Logo portfolio Christopher Buhendwa'
 					/>
 					<p className='text-lightText dark:text-darkSubtitle '>
@@ -60,9 +65,9 @@ function Header() {
 
 			<button
 				className='mb-2 cursor-pointer'
-				onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
+				onClick={() => dispatch(toggleTheme())}
 			>
-				{theme === 'light' ? <LightModeIcon /> : <NightlightIcon />}
+				{currentTheme === 'dark' ? <LightModeIcon /> : <NightlightIcon />}
 			</button>
 		</div>
 	);

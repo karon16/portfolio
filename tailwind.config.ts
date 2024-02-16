@@ -9,7 +9,6 @@ const config: Config = {
 	],
 
 	theme: {
-		
 		extend: {
 			spacing: {
 				'100': '28rem',
@@ -20,26 +19,26 @@ const config: Config = {
 				'120': '48rem',
 			},
 			colors: {
-			accent: '#0689E8',
+				accent: '#0689E8',
 
-			lightBg: '#fdfdfd',
-			lightCards: '#FFFFFF',
-			lightText: '#1C1C1C',
-			lightSubtitle: '#4C4C4C',
-			lightSection: '#4E4E4E',
-			lightIcon: '#1C1C1C',
-			lightBtn: '#1C1C1C',
-			lightBtnText: '#EDEDED',
+				lightBg: '#fdfdfd',
+				lightCards: '#FFFFFF',
+				lightText: '#1C1C1C',
+				lightSubtitle: '#4C4C4C',
+				lightSection: '#4E4E4E',
+				lightIcon: '#1C1C1C',
+				lightBtn: '#1C1C1C',
+				lightBtnText: '#EDEDED',
 
-			darkBg: '#1C1C1C',
-			darkCards: '#242329',
-			darkText: '#EDEDED',
-			darkSubtitle: '#A5A5A5',
-			darkSection: '#4E4E4E',
-			darkIcon: '#9E9E9E',
-			darkBtn: '#fdfdfd',
-			darkBtnText: '#1C1C1C',
-		},
+				darkBg: '#1C1C1C',
+				darkCards: '#242329',
+				darkText: '#EDEDED',
+				darkSubtitle: '#A5A5A5',
+				darkSection: '#4E4E4E',
+				darkIcon: '#9E9E9E',
+				darkBtn: '#fdfdfd',
+				darkBtnText: '#1C1C1C',
+			},
 		},
 	},
 	plugins: [],
