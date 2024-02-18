@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import NightlightIcon from '@mui/icons-material/Nightlight';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '../lib/redux/hooks';
 import { toggleTheme } from '../lib/redux/features/theme/themeSlice';
@@ -64,7 +64,11 @@ function Header() {
 					dispatch(toggleTheme());
 				}}
 			>
-				{currentTheme === 'dark' ? <LightModeIcon /> : <NightlightIcon />}
+				{currentTheme === 'dark' ? (
+					<LightModeOutlinedIcon />
+				) : (
+					<NightlightOutlinedIcon />
+				)}
 			</button>
 		</div>
 	);

@@ -41,29 +41,30 @@ const ParticlesHero = () => {
 						mode: 'push',
 					},
 					onHover: {
-						enable: false,
-						mode: 'repulse',
+						enable: true,
+						mode: 'grab',
 					},
 				},
 				modes: {
 					push: {
 						quantity: 4,
 					},
-					repulse: {
-						distance: 200,
-						duration: 0.4,
-					},
+					// repulse: {
+					// 	distance: 200,
+					// 	duration: 0.4,
+					// },
 				},
 			},
 			particles: {
 				color: {
 					value: `${currentTheme === 'dark' ? '#fff' : '#000'}`,
+					opacity: 0.1,
 				},
 				links: {
 					color: `${currentTheme === 'dark' ? '#fff' : '#000'}`,
 					distance: 150,
 					enable: true,
-					opacity: 0.2,
+					opacity: 0.1,
 					width: 1,
 				},
 				move: {
@@ -89,6 +90,9 @@ const ParticlesHero = () => {
 				},
 			},
 			detectRetina: true,
+			style: {
+				// zIndex: 0,
+			},
 		}),
 		[currentTheme]
 	);
@@ -99,7 +103,7 @@ const ParticlesHero = () => {
 				id='tsparticles'
 				particlesLoaded={particlesLoaded}
 				options={options}
-				style={{ width: 10 }}
+				// style={{ width: 10 }}
 				// height='auto'
 			/>
 		);

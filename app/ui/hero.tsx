@@ -7,7 +7,7 @@ function Hero() {
 		<div className='w-full h-120'>
 			<ParticlesHero />
 			<div className='w-full h-120 flex flex-col items-center justify-center   space-y-8'>
-				<p className='text:lightText dark:text-darkText font-bold text-5xl p-0 m-0 text-center '>
+				<p className='text:lightText dark:text-darkText font-bold text-7xl p-0 m-0 text-center '>
 					Building Beautiful <span className='text-accent'>Frontend</span>
 					<br /> Coding Future <span className='text-accent'>AI</span>
 				</p>
