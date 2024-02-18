@@ -11,8 +11,7 @@ import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSl
 import { useAppSelector } from '../lib/redux/hooks';
 
 const ParticlesHero = () => {
-	const currentTheme =
-		useAppSelector((state) => state.theme.currentTheme) || 'dark';
+	const currentTheme = useAppSelector((state) => state.theme.currentTheme);
 	const [init, setInit] = useState(false);
 
 	useEffect(() => {
@@ -91,7 +90,7 @@ const ParticlesHero = () => {
 			},
 			detectRetina: true,
 		}),
-		[]
+		[currentTheme]
 	);
 
 	if (init) {

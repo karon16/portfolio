@@ -3,6 +3,7 @@ import { Anek_Kannada } from 'next/font/google';
 import './globals.css';
 import Header from './ui/header';
 import StoreProvider from './storeProvider';
+import ThemeInitializer from './themInitializer';
 
 const anek = Anek_Kannada({ subsets: ['latin'] });
 
@@ -15,8 +16,6 @@ export const metadata: Metadata = {
 	},
 };
 
-
-
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -24,17 +23,19 @@ export default function RootLayout({
 }>) {
 	return (
 		<StoreProvider>
-			<html lang='en'>
-				<body
-					className={`px-28 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
-				>
-					<header>
-						<Header />
-					</header>
-					{children}
-					<footer>Footer</footer>
-				</body>
-			</html>
+			<ThemeInitializer>
+				<html lang='en'>
+					<body
+						className={`px-28 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
+					>
+						<header>
+							<Header />
+						</header>
+						{children}
+						<footer>Footer</footer>
+					</body>
+				</html>
+			</ThemeInitializer>
 		</StoreProvider>
 	);
 }
