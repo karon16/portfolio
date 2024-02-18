@@ -12,33 +12,28 @@ function Header() {
 	const currentTheme = useAppSelector((state) => state.theme.currentTheme);
 	const dispatch = useAppDispatch();
 
-	// const [theme, setTheme] = useState(
-	// 	typeof window !== 'undefined' ? localStorage.theme : 'dark'
-	// );
-
-	// const colorTheme = theme === 'dark' ? 'light' : 'dark';
-
-	// useEffect(() => {
-	// 	const root = window.document.documentElement;
-
-	// 	root.classList.remove(colorTheme);
-	// 	root.classList.add(theme);
-
-	// 	if (typeof window !== 'undefined') {
-	// 		localStorage.setItem('theme', theme);
-	// 	}
-	// }, [colorTheme, theme]);
-
 	return (
 		<div className='flex  items-center content-center space-x-3 '>
 			<div className='grow col-span-11 h-24 mb-2 py-7 flex content-center justify-between'>
 				<div>
-					<Image
-						height={80}
-						width={80}
-						src={`${currentTheme === 'dark' ? '/chris.svg' : '/chris_light.svg'}`}
-						alt='Logo portfolio Christopher Buhendwa'
-					/>
+					{currentTheme != undefined && currentTheme === 'dark' ? (
+						<Image
+							height={80}
+							width={80}
+							// style={{ width: 'auto', height: 'auto' }}
+							src='/chris.svg'
+							alt='Logo portfolio Christopher Buhendwa'
+						/>
+					) : (
+						<Image
+							height={80}
+							width={80}
+							// style={{ width: 'auto', height: 'auto' }}
+							src='/chris_light.svg'
+							alt='Logo portfolio Christopher Buhendwa'
+						/>
+					)}
+
 					<p className='text-lightText dark:text-darkSubtitle '>
 						Frontend Developer | AI Student
 					</p>
@@ -65,7 +60,9 @@ function Header() {
 
 			<button
 				className='mb-2 cursor-pointer'
-				onClick={() => dispatch(toggleTheme())}
+				onClick={() => {
+					dispatch(toggleTheme());
+				}}
 			>
 				{currentTheme === 'dark' ? <LightModeIcon /> : <NightlightIcon />}
 			</button>

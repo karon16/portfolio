@@ -12,12 +12,12 @@ npm run check-lint || (
 
 )
 
-# npm run build || 
-# (
-#     echo 'your build failed
-#           Next build failed : View the errors above to see why.'
-#           false;
-# )
+npm run build || 
+(
+    echo 'your build failed
+          Next build failed : View the errors above to see why.'
+          false;
+)
 
 echo '🟢 Project Build successfully'
 # echo '🟢 Project fomatted and linted successfully'

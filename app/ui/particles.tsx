@@ -8,11 +8,12 @@ import {
 	// OutMode,
 } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { useAppSelector } from '../lib/redux/hooks';
 
 const ParticlesHero = () => {
+	const currentTheme =
+		useAppSelector((state) => state.theme.currentTheme) || 'dark';
 	const [init, setInit] = useState(false);
-	// const [theme, setTheme] = useState('dark');
-	// `${theme === 'dark' ? '#fff' : '#000000'}`;
 
 	useEffect(() => {
 		initParticlesEngine(async (engine) => {
@@ -21,15 +22,6 @@ const ParticlesHero = () => {
 			setInit(true);
 		});
 	}, []);
-
-	// useEffect(() => {
-	// 	if (typeof window !== 'undefined') {
-	// 		setTheme(localStorage.theme);
-	// 		// console.log(theme);
-	// 	}
-	// }, [theme]);
-
-	// let currentTheme = theme;
 
 	const particlesLoaded = async (container?: Container): Promise<void> => {
 		// console.log(container);
@@ -66,10 +58,10 @@ const ParticlesHero = () => {
 			},
 			particles: {
 				color: {
-					value: '#fff',
+					value: `${currentTheme === 'dark' ? '#fff' : '#000'}`,
 				},
 				links: {
-					color: '#fff',
+					color: `${currentTheme === 'dark' ? '#fff' : '#000'}`,
 					distance: 150,
 					enable: true,
 					opacity: 0.2,
