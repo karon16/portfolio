@@ -33,6 +33,7 @@ const ParticlesHero = () => {
 					value: 'none',
 				},
 			},
+			fullScreen: true,
 			fpsLimit: 120,
 			interactivity: {
 				events: {

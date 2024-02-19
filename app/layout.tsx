@@ -4,6 +4,7 @@ import './globals.css';
 import Header from './ui/header';
 import StoreProvider from './storeProvider';
 import ThemeInitializer from './themInitializer';
+// import ParticlesHero from './ui/particles';
 
 const anek = Anek_Kannada({ subsets: ['latin'] });
 
@@ -26,13 +27,13 @@ export default function RootLayout({
 			<ThemeInitializer>
 				<html lang='en'>
 					<body
-						className={`px-36 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
+						className={`sm:px-12 md:px-36 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
 					>
 						<header>
 							<Header />
 						</header>
 						{children}
-						<footer>Footer</footer>
+						<footer></footer>
 					</body>
 				</html>
 			</ThemeInitializer>

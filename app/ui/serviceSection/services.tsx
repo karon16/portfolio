@@ -1,55 +1,43 @@
 import React from 'react';
 import ServiceCard from './serviceCard';
-import ArchitectureOutlinedIcon from '@mui/icons-material/ArchitectureOutlined';
-import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
+
+
+const services = [
+	{
+		label: 'UI/UX Design',
+		icon: 'icon-[solar--figma-outline]',
+		description: 'Lorem ipsum dolor sit amet consectetur.',
+	},
+	{
+		label: 'Frontend Development',
+		icon: 'icon-[lucide--code-2]',
+		description: 'Lorem ipsum dolor sit amet consectetur.',
+	},
+	{
+		label: 'Backend',
+		icon: 'icon-[mdi--server-outline]',
+		description: 'Lorem ipsum dolor sit amet consectetur.',
+	},
+	{
+		label: 'Machine Learning',
+		icon: 'icon-[fluent--brain-circuit-24-regular]',
+		description: 'Lorem ipsum dolor sit amet consectetur.',
+	},
+];
 
 function Services() {
 	return (
-		<div className='grid grid-cols-4 gap-6'>
-			<ServiceCard
-				Icon={
-					<ArchitectureOutlinedIcon
-						sx={{
-							fontSize: 70,
-						}}
+		<div className='xs:grid-cols-1 sm:grid-cols-2  md:grid-cols-4 grid grid-cols-4 gap-6 mb-32'>
+			{services.map((service, index) => {
+				return (
+					<ServiceCard
+						key={index}
+						icon={service.icon}
+						label={service.label}
+						description={service.description}
 					/>
-				}
-				title='UI/UX Design'
-				description='Lorem ipsum dolor sit amet consectetur. '
-			/>
-			<ServiceCard
-				Icon={
-					<ArchitectureOutlinedIcon
-						sx={{
-							fontSize: 70,
-						}}
-					/>
-				}
-				title='UI/UX Design'
-				description='Lorem ipsum dolor sit amet consectetur. '
-			/>
-			<ServiceCard
-				Icon={
-					<DnsOutlinedIcon
-						sx={{
-							fontSize: 70,
-						}}
-					/>
-				}
-				title='UI/UX Design'
-				description='Lorem ipsum dolor sit amet consectetur. '
-			/>
-			<ServiceCard
-				Icon={
-					<ArchitectureOutlinedIcon
-						sx={{
-							fontSize: 70,
-						}}
-					/>
-				}
-				title='UI/UX Design'
-				description='Lorem ipsum dolor sit amet consectetur. '
-			/>
+				);
+			})}
 		</div>
 	);
 }

@@ -17,6 +17,7 @@
 }
 
 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -26,6 +27,23 @@
 #tsparticles{
    position: absolute;
   width: auto;
-  height: auto;
+  height: 100%;
   z-index: -100;
+}
+
+#gradien-circle{
+  background: rgb(73,3,70);
+background: radial-gradient(circle, rgba(73,3,70,0.0802696078431373) 0%, rgba(73,3,70,0.02984943977591037) 30%, rgba(31,30,35,0.8897934173669468) 71%);
+  position: absolute;
+  top:50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 1000px;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  z-index: -10;
+  border-radius: 50%;
 }

@@ -1,4 +1,6 @@
 import type { Config } from 'tailwindcss';
+// const { addDynamicIconSelectors } = require('@iconify/tailwind');
+import { addDynamicIconSelectors } from '@iconify/tailwind';
 
 const config: Config = {
 	darkMode: 'class',
@@ -21,26 +23,29 @@ const config: Config = {
 			colors: {
 				accent: '#0689E8',
 
-				lightBg: '#fdfdfd',
+				lightBg: '#F0F0F0',
 				lightCards: '#FFFFFF',
-				lightText: '#1C1C1C',
+				lightText: '#1F1E23',
 				lightSubtitle: '#4C4C4C',
 				lightSection: '#4E4E4E',
-				lightIcon: '#1C1C1C',
-				lightBtn: '#1C1C1C',
+				lightIcon: '#1F1E23',
+				lightBtn: '#1F1E23',
 				lightBtnText: '#EDEDED',
 
-				darkBg: '#1C1C1C',
+				darkBg: '#1F1E23',
 				darkCards: '#242329',
 				darkText: '#EDEDED',
 				darkSubtitle: '#A5A5A5',
 				darkSection: '#4E4E4E',
 				darkIcon: '#9E9E9E',
 				darkBtn: '#fdfdfd',
-				darkBtnText: '#1C1C1C',
+				darkBtnText: '#1F1E23',
+			},
+			screens: {
+				xs: '320px',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [addDynamicIconSelectors()],
 };
 export default config;

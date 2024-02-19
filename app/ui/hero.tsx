@@ -4,7 +4,8 @@ import ParticlesHero from './particles';
 
 function Hero() {
 	return (
-		<div className='w-full h-120'>
+		<div className='w-full h-120 relative'>
+			{/* <div id='gradien-circle'></div> */}
 			<ParticlesHero />
 			<div className='w-full h-120 flex flex-col items-center justify-center   space-y-8'>
 				<p className='text:lightText dark:text-darkText font-bold text-7xl p-0 m-0 text-center '>
