@@ -1,7 +1,6 @@
 import React from 'react';
 import ServiceCard from './serviceCard';
 
-
 const services = [
 	{
 		label: 'UI/UX Design',
