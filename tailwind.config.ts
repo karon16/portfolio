@@ -33,13 +33,16 @@ const config: Config = {
 				lightBtnText: '#EDEDED',
 
 				darkBg: '#1F1E23',
-				darkCards: '#242329',
+				darkCards: '#161b20',
 				darkText: '#EDEDED',
 				darkSubtitle: '#A5A5A5',
 				darkSection: '#4E4E4E',
 				darkIcon: '#9E9E9E',
 				darkBtn: '#fdfdfd',
 				darkBtnText: '#1F1E23',
+
+				darkFrom: '#0f1216',
+				darkTo: '#171f26'
 			},
 			screens: {
 				xs: '320px',

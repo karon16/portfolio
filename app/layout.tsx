@@ -27,7 +27,7 @@ export default function RootLayout({
 			<ThemeInitializer>
 				<html lang='en'>
 					<body
-						className={`sm:px-12 md:px-36 bg-lightBg text:lightText dark:bg-darkBg dark:text-darkText ${anek.className}`}
+						className={`sm:px-12 md:px-36 bg-lightBg text:lightText dark:bg-gradient-to-br from-0% from-darkFrom to-100% to-darkTo dark:text-darkText ${anek.className}`}
 					>
 						<header>
 							<Header />

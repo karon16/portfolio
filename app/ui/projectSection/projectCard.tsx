@@ -4,7 +4,7 @@ import React from 'react';
 
 export const ProjectCard = () => {
 	return (
-		<div className='flex flex-col rounded-xl dark:bg-darkCards pb-6 w-96 '>
+		<div className='flex flex-col rounded-xl dark:bg-darkCards pb-6 w-100 shadow-xl'>
 			<div className=''>
 				<Image
 					sizes='100%'
@@ -16,7 +16,7 @@ export const ProjectCard = () => {
 					height={300}
 					src='/prototype.jpg'
 					alt='project screenshot'
-					className='rounded-xl'
+					className='rounded-t-xl'
 				/>
 			</div>
 			<div className='flex flex-col divide-y divide-slate-50/20 px-6'>

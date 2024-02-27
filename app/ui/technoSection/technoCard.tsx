@@ -7,7 +7,7 @@ interface TechnoInterface {
 
 const TechnoCard = ({ label, icon }: TechnoInterface) => {
 	return (
-		<div className='w-60 h-44 flex flex-col items-center content-center justify-center  rounded-xl dark:border-none  bg-lightCards dark:bg-darkCards '>
+		<div className='w-60 h-44 flex flex-col items-center content-center justify-center  rounded-xl dark:border-none  bg-lightCards dark:bg-darkCards shadow-xl '>
 			<div className='text-6xl'>
 				<span className={icon}></span>
 			</div>

@@ -8,7 +8,7 @@ interface ServiceProps {
 
 function ServiceCard({ icon, label, description }: ServiceProps) {
 	return (
-		<div className='sm:p-4 md:p-6 flex flex-col align-center items-center dark:border-none content-center rounded-xl lg:py-8 space-y-1  bg-lightCards dark:bg-darkCards'>
+		<div className='sm:p-4 md:p-6 flex flex-col align-center items-center  content-center rounded-xl lg:py-8 space-y-1  bg-lightCards dark:bg-darkCards shadow-xl '>
 			<div className='sm:text-5xl text-6xl dark:text-accent text-accent'>
 				<span className={icon}></span>
 			</div>
