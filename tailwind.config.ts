@@ -42,7 +42,7 @@ const config: Config = {
 				darkBtnText: '#1F1E23',
 
 				darkFrom: '#0f1216',
-				darkTo: '#171f26'
+				darkTo: '#171f26',
 			},
 			screens: {
 				xs: '320px',

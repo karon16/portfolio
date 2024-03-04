@@ -47,3 +47,25 @@ background: radial-gradient(circle, rgba(73,3,70,0.0802696078431373) 0%, rgba(73
   z-index: -10;
   border-radius: 50%;
 }
+
+#experience-line{
+  position: relative;
+  width:1px;
+  background-color: aliceblue;
+  
+  
+}
+
+#experience-circle{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 100%;
+  top:50%;
+  left: -1000%;
+   transform: translateX(-500%);
+  transform: translateY(-50%);
+}
+
+
