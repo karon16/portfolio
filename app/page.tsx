@@ -7,6 +7,7 @@ import SectionTitle from './ui/sectionTitle';
 import Techno from './ui/technoSection/techno';
 import Projects from './ui/projectSection/project';
 import Experience from './ui/experienceSection/experience';
+import Comments from './ui/commentSection/comments';
 // import ParticlesHero from './ui/particles';
 
 export default function Home() {
@@ -35,6 +36,11 @@ export default function Home() {
 				description='Have a look on my recent projects'
 			/>
 			<Experience />
+			<SectionTitle
+				label='What they say'
+				description='Have a look on my recent projects'
+			/>
+			<Comments />
 		</main>
 	);
 }
